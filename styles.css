@@ -1,0 +1,374 @@
+
+html, body, div, h1, h2, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  background-color: #07323e;
+}
+
+@font-face {
+  font-family: 'cortado';
+  src: url('Fonts/Cortado.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'arial-rounded';
+  src: url('Fonts/Arial-rounded.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'futura';
+  src: url('Fonts/Futura.ttf') format('truetype');
+}
+
+.background-container {
+  position: relative;
+  background-image: url('./Images/Background1.png');
+  background-color: #07323e;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 1400px;
+  min-width: 2560px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 900px) {
+  .background-container {
+    display: none;
+  }
+}  
+
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Navigation Bar Styling */
+.navigation-bar {
+  animation: slide-in-top 0.8s ease-out forwards;
+  position: absolute;
+  left: 4%;
+  display: flex;
+  justify-content: center; /* Horizontal center alignment */
+  width: 100%;
+  height: 100px;
+  margin-top: 8px;
+  font-family: cortado;
+  font-size: 30px;
+}
+
+.navigation-bar ul {
+  display: flex;
+  justify-content: space-between;
+  width: 38%; /* Adjust this value as needed, depending on how much of the row you want the navbar to occupy */
+}
+
+.navigation-bar li {
+  margin: 0 10px; /* This will give a 20px space between the elements as each element will have 10px margin on both sides */
+}
+
+.navigation-bar .icons a {
+  margin: 0 2px; /* Adjust this value to get the icons as close as you want */
+  padding-top: 0; /* Remove the padding from the icons */
+  line-height: normal; /* Reset the line height for the icons */
+}
+
+/* Link Styling */
+.navigation-bar a {
+  text-decoration: none; /* To remove the underline from the links */
+  color: yellow; /* Change this color as per your design */
+  transition: color 0.2s linear; /* This will add the transition effect */
+  padding-top: 10px;
+  line-height: 1.5; /* Adjust this value as needed */
+}
+
+.navigation-bar a:hover {
+  color: rgb(255, 115, 0); /* Change this color to the color you want on hover */
+}
+
+.navigation-bar img {
+  height: 40px; /* Adjust the size of the icon images as required */
+  width: auto;
+  transition: filter 0.2s linear;
+}
+
+.navigation-bar a:hover img {
+  filter: brightness(70%) sepia(1) hue-rotate(-10deg) saturate(700%) contrast(85%);
+}
+
+.home-page {
+  visibility: hidden;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.drinkly-title, .grid-container1, .grid-container2, .p1, .p2, .h3, .qr-code {
+  animation: slide-in 0.8s ease-out forwards;
+}
+
+.drinkly-title {
+  text-shadow: 2px 3px 8px black;
+  font-weight: 1;
+  color: yellow;
+  position: absolute;
+  font-family: cortado;
+  font-size: 125px;
+  left: 740px;
+  top: 5%;
+}
+
+.p1, .p2 {
+  position: absolute;
+  font-family: arial-rounded;
+  color: white;
+  left: 740px;
+}
+
+.p1 {
+  font-size: 38px;
+  top: 17.5%;
+  width: 300px;
+  line-height: 48px;
+}
+
+.p2 {
+  font-size: 18px;
+  top: 30%;
+  width: 290px;
+}
+
+.qr-code {
+  position: absolute;
+  top: 37%;
+  left: 790px;
+}
+
+.grid-container1, .grid-container2 {
+  position: absolute;
+  left: 740px;
+  display: grid;
+  grid-template-columns: 50px 300px;
+}
+
+.grid-container1 {
+  top: 52%;
+}
+
+.grid-container2 {
+  top: 63%;
+}
+
+.fireicon, .lightbulb {
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.p3, .p5 {
+  font-family: futura;
+  color: rgb(255, 207, 100);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.p4, .p6 {
+  font-family: arial-rounded;
+  color: white;
+  font-size: 17px;
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.app-reviews {
+  animation: fade-up 0.8s ease-out forwards;
+  position: absolute;
+  left: 47.4%;
+  top: 1094px;
+  color: white;
+  font-family: arial-rounded;
+}
+
+footer {
+  animation: fade-up 0.8s ease-out forwards;
+  position: absolute;
+  width: 1120px;
+  left: 30%;
+  top: 1152px;
+  color: white;
+  font-family: arial-rounded;
+}
+
+.card {
+  width: 265px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  color: #FFFFFF;
+  font-family: arial-rounded;
+  word-wrap: break-word;
+  background-clip: border-box;
+  background-color: #457383;
+  border: 1.5px solid black;
+  border-radius: 20px;
+}
+
+.card-title {
+  display: flex;
+  justify-content:space-between;
+}
+
+.review-paragraph {
+  font-size: 12px;
+} 
+
+.star-icon {
+  color: #212529 !important;
+  font-size: 10px;
+  margin-top: -25px;
+  margin-bottom: 2px;
+}
+
+.see-more {
+  font-weight: bolder;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-modal {
+  background-color: #457383;
+  border-radius: 25px;
+  border: 2px solid #000000;
+}
+
+/*===============================
+        MOBILE VIEW STYLING START
+================================= */
+
+
+@media screen and (max-width: 900px) {
+  .mobile-view {
+    background-image: url('Images/home-mobile-img.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 900px;
+    max-width: auto; 
+  }
+}  
+
+.home_main_heading_mob {
+  margin-top: 10px;
+  color: #FFFF00;
+  font-size: 35px;
+  font-weight: 500;
+  font-family: cortado;
+}
+
+.home_sec_main_heading {
+  width: 250px;
+  padding: 7px;
+  position: relative;
+  font-family: arial-rounded;
+  color: #fff;
+}
+
+  .app_downloads {
+    padding-left: 20px;
+    animation: fade-up 0.8s ease-out forwards;
+    position: absolute;
+    top: 660px;
+    color: white;
+    font-family: arial-rounded;
+  }
+
+/* ======================
+  MOBILE NAVBAR START 
+  ====================== */
+
+  .nav_button {
+    padding: 20px;
+    float: right;
+    background-color: transparent;
+    color: transparent;
+    background-repeat: no-repeat;
+    border: transparent;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .header-modal-dialog {
+    margin: -2px;
+    background-color: #052E3A;
+    width: 100%;
+    float: right;
+  }
+  
+  .header-modal-content {
+    background-color: transparent;
+    border: 0;
+    padding: 10px 0 0 10px;
+  }
+  
+  .header-modal-pages {
+    text-decoration: underline;
+    text-align: center;
+    color: yellow;
+    font-family: cortado;
+  }
+  
+  .header-modal-pages  :hover {
+    color: rgb(255, 115, 0);
+  }
+  
+  .btn-close {
+    box-sizing: content-box;
+    width: 100%;
+    height: 2em;
+    padding: .25em .25em;
+    color: white;
+    background: url('Images/cross.svg');
+    background-repeat: no-repeat;
+    border: 0;
+    border-radius: .25rem;
+    opacity: .5
+  }
+  
+  .btn-close :hover {
+    border: #052E3A;
+  }
+  
+  .btn-close :active {
+    border: 1px solid #000000;
+  }
+  /* ======================
+  MOBILE NAVBAR END
+  ====================== */
